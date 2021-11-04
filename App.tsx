@@ -1,19 +1,20 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { StatusBar } from "react-native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { SafeAreaProvider } from "react-native-safe-area-context";
+import Colors from "./config/Colors";
+import { HeatzyClientContextProvider } from "./components/HeatzyClientContext";
+import Navigator from "./screens/Navigator";
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-    </View>
+    <SafeAreaProvider>
+      <StatusBar barStyle="dark-content" backgroundColor={Colors.snowWhite} />
+      <HeatzyClientContextProvider>
+        <Navigator />
+      </HeatzyClientContextProvider>
+    </SafeAreaProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

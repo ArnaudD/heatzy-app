@@ -1,0 +1,35 @@
+{
+  "name": "heatzy-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "exports": {
+    "./*": "./dist/*"
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "dist/*"
+      ]
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "watch": "tsc --watch --preserveWatchOutput"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/lodash": "^4.14.176",
+    "cross-fetch": "^3.1.4",
+    "eventemitter3": "^4.0.7",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "esm": "^3.2.25",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4"
+  }
+}
